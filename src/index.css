@@ -1,13 +1,210 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap');
+
+* ,::after , ::before{
+  margin : 0 ; 
+  padding : 0 ; 
+  box-sizing : border-box ; 
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-color : cadetblue  ;
+  font-family: 'Nunito',sans-serif  ;
+  font-size : 2rem ; 
+  line-height : 1.5 ; 
+  min-height :100vh ; 
+}
+main{
+  margin : 5rem  auto ;
+  max-width : 500px ;
+}
+.container{
+  margin : 0 auto ; 
+  width : 70%;
+  min-width : 400px ; 
+  max-width :800px ;
+  background-color :whitesmoke ;
+  display : flex ; 
+  flex-flow :column  nowrap ;
+  justify-content :space-evenly ; 
+  gap  :1rem ;
+  align-items :center ;
+  border-radius :12px ; 
+  box-shadow : 0 5px 10px rgba(0 , 0 ,0 ,0.4);
+  min-height : 200px ;
+
+
+}
+.container h3{
+  font-size: 2rem ;
+  letter-spacing : 3px ;
+  color :darkslategray  ;
+}
+.container form{
+  width : 90% ;
+}
+.fill-item{
+  width :60% ;
+  font-size : 1.4rem ;
+  padding : 0.2rem 0.4rem ;
+  background-color :rgb(217, 242, 255);
+  border-color : transparent ; 
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+
+
+
+
+}
+.submit-btn{
+  width : 40%;
+  font-size : 1.4rem ;
+  padding : 0.2rem 0.4rem ;
+  background-color : darkslategray ;
+  color : whitesmoke ;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-color :transparent ;
+  cursor : pointer ; 
+  text-transform :capitalize ;
+  transition :all 0.4s ease-in-out ;
+  
+   
+
+
+}
+.submit-btn:hover{
+  background-color :darkgrey ;
+  color : darkslategray ; 
+
+}
+.list-items{
+  width :90% ;
+  display : flex ;
+  flex-flow : column nowrap ; 
+  justify-content :space-evenly ;
+  align-items:center; 
+}
+.single-item{
+  display : flex ;
+  justify-content :space-evenly ;
+  align-items :center; 
+  gap : 3rem ;
+  width : 100% ;
+  margin-bottom : 1rem ;
+}
+.title{
+  width :70% ; 
+  font-size  : 1.2rem ;
+}
+.btn-container{
+  width :30% ; 
+  display : grid; 
+  grid-template-columns : 1fr 1fr ; 
+  column-gap : 1rem ;
+}
+.clear-btn{
+  width :35% ;
+  margin-bottom : 2rem;
+  margin-top : 2rem;
+  font-size :1.5rem ;
+  border-radius : 8px;
+  border-color : transparent ; 
+  background-color : cornflowerblue ; 
+  color :whitesmoke ;
+  cursor :pointer ;
+  text-transform : capitalize ;
+}
+.edit-btn , .delete-btn{
+  font-size : 1.2rem ;
+  display : grid; 
+  place-content :center ;
+  padding :0.5rem ;
+  border-radius : 5px ;
+  border-color: transparent ; 
+  color :#333 ;
+  cursor :pointer ; 
+  transition :all 0.4s ease-in-out ;
+}
+.edit-btn{
+  background-color :rgb(11, 234, 145) ;
+  
+}
+.delete-btn{
+  background-color : rgba(255, 76, 76, 0.809); 
+}
+.edit-btn:hover{
+  background-color :green ;
+}
+.delete-btn:hover{
+  background-color : red ;
+}
+.alert{
+  position :relative ;
+  width :70% ; 
+  border-top-left-radius : 12px; 
+  border-top-right-radius : 12px; 
+
+
+
+  margin : 1rem auto ;
+  box-shadow : 0 5px 15px rgba(0 , 0 , 0 ,0.1);
+}
+.alert .top{
+  display : flex ;
+  justify-content :space-evenly; 
+  align-items :center ;
+  gap : 1rem ; 
+
+}
+
+.underline{
+  display :block ;
+  bottom :0 ;
+  left:0 ; 
+  width :100% ; 
+  content :"";
+  height :5px ;
+  transition : all 5s ease-in-out ; 
+  animation : scaling 5s linear ;  
+  
+}.danger{
+  background-color : red ;
+}
+.success{
+  background-color : green ;
+}
+.msg{
+  text-align :center; 
+  text-transform : capitalize ; 
+  font-size :1.4rem ;
+}
+.removeAlert{
+  background-color :transparent;
+  color : #333 ;  
+  border-color:transparent ;
+  font-size : 1.5rem ;
+  top : 0 ; 
+  right :0; 
+  margin-right: 0.5rem ;
+  cursor : pointer ;
+  transition : all 0.4s ease-in-out ; 
+}
+.removeAlert:hover{
+  transform : scale(1.2);
+}
+.danger-btn{
+  background-color : transparent  ;
+  color  :red ;
+
+}
+.success-btn{
+  background-color: transparent; 
+  color :green ;
+}
+.danger-btn , .success-btn{
+  top : 0px ;
+  left :0 ; 
+  margin-left : 0.5rem ;
+
 }
